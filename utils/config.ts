@@ -3,12 +3,12 @@ const currentEnv = process.env.NODE_ENV || "production";
 // Set the correct URL for the API
 export function setApiUrl(localUrl: string): string {
   const environments = {
-    development: "http://localhost:8000/api",
+    development: "http://localhost:8000",
     // development: "https://backend.dktshumen.com/api",
     // development: "https://test.grand-ant.com/api",
     // production: "http://localhost:8000/api",
     // production: "https://backend.dktshumen.com/api",
-    production: "https://test.grand-ant.com/api",
+    production: "https://api.dktshumen.com",
   };
 
   const apiUrl = environments[currentEnv];
