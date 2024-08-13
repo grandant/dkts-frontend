@@ -4,10 +4,10 @@ const currentEnv = process.env.NODE_ENV || "production";
 export function setApiUrl(localUrl: string): string {
   const environments = {
     development: "http://localhost:8000",
-    // development: "https://backend.dktshumen.com/api",
-    // development: "https://test.grand-ant.com/api",
+    // development: "https://test.grand-ant.com",
+    // development: "https://api.dktshumen.com",
     // production: "http://localhost:8000/api",
-    // production: "https://backend.dktshumen.com/api",
+    // production: "https://test.grand-ant.com",
     production: "https://api.dktshumen.com",
   };
 

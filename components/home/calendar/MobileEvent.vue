@@ -33,7 +33,7 @@ onMounted(() => {
   </div>
   <div class="row row-cols-auto mb-3">
     <!-- Col-1 -->
-    <div class="col d-flex flex-column align-items-end">
+    <div class="col d-flex flex-column align-items-end pe-1">
       <NuxtLinkLocale class="" :to="`/events/plays/${details.slug}`">
         <slot name="images" />
       </NuxtLinkLocale>
@@ -45,7 +45,7 @@ onMounted(() => {
       <p class="fst-italic fs-5 mt-md-4">{{ time }}</p>
     </div>
     <!-- Col-3 -->
-    <div class="col-4 col-md-4 col-lg-3 d-flex flex-column flex-grow-1 justify-content-between align-items-start ps-1">
+    <div class="col-4 d-flex flex-column flex-grow-1 justify-content-between align-items-start ps-1">
       <div>
         <NuxtLinkLocale class="nav-link" :to="`/events/plays/${details.slug}`">
           <p class="d-flex d-block d-md-none fw-bold mb-0">
@@ -67,7 +67,7 @@ onMounted(() => {
 
 <style lang="css" scoped>
 .stage-pill {
-  width: 72px;
+  width: 81px;
 }
 
 .stage-name {

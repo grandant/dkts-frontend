@@ -34,7 +34,7 @@ onMounted(() => {
                 :src="setMediaUrl(`/media/plays/${event.eventDetails.slug}/poster.jpg`)"
                 :alt="`${event.eventDetails.name} - Poster`"
                 class="img-fluid"
-                sizes="72px md:132px"
+                sizes="81px md:132px"
                 loading="lazy"
               />
             </template>
