@@ -14,7 +14,7 @@ const parsedSizes = parseImageSizes(imageSizes);
   <div class="row mt-3">
     <div class="d-flex align-items-center fs-5 fw-bold mt-4 mb-3 ps-1">
       <Icon name="ph:line-vertical-bold" class="text-primary" />
-      <span class="text-light">Credits</span>
+      <span class="text-light">{{ translations.events.crew }}</span>
     </div>
     <div v-for="(member, index) in play.crew" class="col-6 col-md-4 col-lg-3 mb-3 card-col">
       <!-- :style="`width: ${currentSize}px`" -->
@@ -45,7 +45,7 @@ const parsedSizes = parseImageSizes(imageSizes);
   <div class="row mt-3">
     <div class="d-flex align-items-center fs-5 fw-bold mt-4 mb-3 ps-1">
       <Icon name="ph:line-vertical-bold" class="text-primary" />
-      <span class="text-light">Credits</span>
+      <span class="text-light">{{ translations.events.cast }}</span>
     </div>
     <div v-for="(actor, index) in play.actors" :key="actor.nickname" class="col-6 col-md-4 col-lg-3 mb-3 card-col">
       <!-- :style="`width: ${currentSize}px`" -->

@@ -31,7 +31,7 @@ onMounted(() => {
         </div>
         <div class="col">
           <div class="col-12 col-lg-9">
-            <div class="fw-bold fs-4">{{ translations.events.dkts }}:</div>
+            <div class="fw-bold fs-4">{{ translations.events.cast }}:</div>
             {{ actorNames }}
           </div>
         </div>

@@ -19,7 +19,7 @@ onMounted(() => {
       <div class="row mb-4">
         <div class="d-flex align-items-center fs-5 fw-bold mt-4 mb-3 p-1">
           <Icon name="ph:line-vertical-bold" class="text-primary" />
-          <span class="text-light">Credits</span>
+          <span class="text-light">{{ translations.about.credits }}</span>
         </div>
         <div v-for="(play, index) in actor.plays" :key="play.slug" class="col-6 col-md-4 col-lg-3 mb-3 card-col">
           <div class="row row-cols-auto justify-content-between mx-0 stage-pill">
