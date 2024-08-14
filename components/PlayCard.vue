@@ -16,11 +16,11 @@ onMounted(() => {
 </script>
 
 <template lang="html">
-  <div class="card bg-transparent border border-0 play-card">
-    <NuxtLinkLocale :to="`/events/plays/${playLink}`">
+  <div class="card bg-darker text-light border border-0 play-card">
+    <NuxtLinkLocale :to="`/events/plays/${playLink}`" class="p-2">
       <slot name="images" />
     </NuxtLinkLocale>
-    <div class="card-body d-flex px-0 fw-bold">
+    <div class="card-body d-flex p-2 fw-bold">
       <span class="card-title d-block d-md-none fs-6 m-1 ms-2">
         <slot name="name"> </slot>
       </span>

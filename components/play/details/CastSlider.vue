@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// WARNING: Currently not in use. Maybe will be deleted.
+
 const { data: translations } = useNuxtData("translations");
 const { data: play } = useNuxtData("playData");
 

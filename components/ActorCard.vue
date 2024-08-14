@@ -21,7 +21,7 @@ if (props.buttonSize === "small") {
 
 <template lang="html">
   <div class="card bg-darker text-light actor-card">
-    <NuxtLinkLocale v-if="link" :to="`/about/actors/${link}`">
+    <NuxtLinkLocale v-if="link" :to="`/about/actors/${link}`" class="p-2">
       <slot name="images" />
     </NuxtLinkLocale>
     <slot v-else name="images" />

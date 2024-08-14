@@ -49,46 +49,49 @@ onMounted(() => {
 </script>
 
 <template lang="html">
-  <div class="container my-3">
-    <div class="row row-cols-auto justify-content-center mx-0 px-0 mx-xl-5 px-xl-5">
-      <div v-for="stage in stages" class="col-12 col-md-6 col-lg-4 px-2 px-xl-4 mt-3 card-col">
-        <StageCard>
-          <template #images>
-            <NuxtImg
-              format="webp"
-              :provider="setProvider()"
-              :src="setMediaUrl(`/media/stages/${stage}/photos/1.jpg`)"
-              :alt="`${stage} - Photo`"
-              class="img-fluid card-img-top"
-              sizes="150px md:150px lg:220px xl:150px xxl:320px"
-              placeholder
-            />
-          </template>
-          <template #title>
-            <h1 class="fs-4 fw-bold">{{ stagesData[`${stage}_title`] }}</h1>
-          </template>
-          <template #cardText>
-            <p v-for="p in stagesData[stage].split('\n')">
-              {{ p }}
-            </p>
-          </template>
-          <template #buttons>
-            <span :ref="galleryRefs[stage]" @click="galleries[stage].openGallery(1)" class="row px-2">
-              <StandardButton color="primary mt-3" :rounded="1" :paddingY="userDevice.isMobile ? 1 : 3">
-                <template #text>
-                  {{ stagesData.floor }}
-                </template>
-              </StandardButton>
-            </span>
-            <span @click="galleries[stage].openGallery()" class="row px-2">
-              <StandardButton class="mt-3" color="darker" :rounded="1" :paddingY="userDevice.isMobile ? 1 : 3">
-                <template #text>
-                  {{ stagesData.seating }}
-                </template>
-              </StandardButton>
-            </span>
-          </template>
-        </StageCard>
+  <div class="mt-3">
+    <PageTitle :text="translations.common.stages" />
+    <div class="container my-3">
+      <div class="row row-cols-auto justify-content-center mx-0 px-0 mx-xl-5 px-xl-5">
+        <div v-for="stage in stages" class="col-12 col-md-6 col-lg-4 px-2 px-xl-4 mt-3 card-col">
+          <StageCard>
+            <template #images>
+              <NuxtImg
+                format="webp"
+                :provider="setProvider()"
+                :src="setMediaUrl(`/media/stages/${stage}/photos/1.jpg`)"
+                :alt="`${stage} - Photo`"
+                class="img-fluid card-img-top"
+                sizes="150px md:150px lg:220px xl:150px xxl:320px"
+                placeholder
+              />
+            </template>
+            <template #title>
+              <h1 class="fs-4 fw-bold">{{ stagesData[`${stage}_title`] }}</h1>
+            </template>
+            <template #cardText>
+              <p v-for="p in stagesData[stage].split('\n')">
+                {{ p }}
+              </p>
+            </template>
+            <template #buttons>
+              <span :ref="galleryRefs[stage]" @click="galleries[stage].openGallery(1)" class="row px-2">
+                <StandardButton color="primary mt-3" :rounded="1" :paddingY="userDevice.isMobile ? 1 : 3">
+                  <template #text>
+                    {{ stagesData.floor }}
+                  </template>
+                </StandardButton>
+              </span>
+              <span @click="galleries[stage].openGallery()" class="row px-2">
+                <StandardButton class="mt-3" color="darker" :rounded="1" :paddingY="userDevice.isMobile ? 1 : 3">
+                  <template #text>
+                    {{ stagesData.seating }}
+                  </template>
+                </StandardButton>
+              </span>
+            </template>
+          </StageCard>
+        </div>
       </div>
     </div>
   </div>

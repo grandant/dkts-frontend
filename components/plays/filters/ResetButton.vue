@@ -15,7 +15,7 @@ const resetFilters = () => {
 
 <template lang="html">
   <div class="btn-group me-0" role="group" aria-label="Reset button">
-    <button @click="resetFilters" type="reset" class="btn btn-primary rounded-5 px-5">
+    <button @click="resetFilters" type="reset" class="btn btn-dark rounded-5 px-5">
       {{ translations.events.reset }}
     </button>
   </div>

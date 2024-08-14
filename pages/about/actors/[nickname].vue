@@ -49,9 +49,7 @@ onMounted(() => {
         <ActorBioRow />
       </div>
       <div class="container px-3">
-        <div class="row row-cols-auto text-light rounded-5 bg-gray-blurred gradient-border mt-4 mt-md-5 ps-3">
-          <ActorDetailsRow />
-        </div>
+        <ActorDetailsRow />
       </div>
     </div>
     <!-- Desktop layout -->
@@ -65,9 +63,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="container">
-        <div class="row row-cols-auto text-light rounded-5 bg-gray-blurred gradient-border mt-3 mt-md-5 px-5">
-          <ActorDetailsRow />
-        </div>
+        <ActorDetailsRow />
       </div>
     </div>
     <ActorProfileVideoGallery v-if="totalVideos > 0" />

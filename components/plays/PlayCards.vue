@@ -1,8 +1,11 @@
 <script setup lang="ts">
 const { data: plays } = useNuxtData("plays");
+const { data: translations } = useNuxtData("translations");
+
 const currentFilter = useState("current");
 const audienceFilter = useState("audience");
 const genreFilter = useState("genre");
+
 const activeFilters = computed(() => {
   return [...currentFilter.value, ...audienceFilter.value, ...genreFilter.value];
 });
@@ -26,7 +29,7 @@ onMounted(() => {
           v-for="play in filteredPlays"
           :key="play"
           :data-groups="play.filter"
-          class="col-6 col-md-4 col-lg-3 col-xl-3 mb-3 card-col"
+          class="col-6 col-md-4 col-lg-3 col-xl-3 mb-4 card-col"
         >
           <div class="row row-cols-auto justify-content-between text-light mx-0 stage-pill">
             <StagePill :stage="play.stage" :paddingX="1">
@@ -34,18 +37,21 @@ onMounted(() => {
                 {{ getTranslation(play, "stage") }}
               </template>
             </StagePill>
-            <div class="col pe-0">
-              {{ play.length }}
-            </div>
+            <div class="col pe-0">{{ play.length }} {{ translations.events.min }}</div>
           </div>
-          <PlayCard :playLink="play.slug" :isCurrent="play.current" :ticket-link="play.entase_data?.[0]?.id ?? null">
+          <PlayCard
+            :playLink="play.slug"
+            :isCurrent="play.current"
+            :ticket-link="play.entase_data?.[0]?.id ?? null"
+            class="rounded-0"
+          >
             <template #images>
               <NuxtImg
                 format="webp"
                 :provider="setProvider()"
                 :src="setMediaUrl(`/media/plays/${play.slug}/poster.jpg`)"
                 :alt="`${play.name} - Poster`"
-                class="card-img-top img-fluid rounded-0"
+                class="card-img-top img-fluid"
                 :width="10"
                 :height="14"
                 sizes="150px sm:35vw md:15vw lg:10vw xl:15vw"

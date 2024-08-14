@@ -83,7 +83,7 @@ onMounted(() => {
         data-bs-target="#filtersModal"
       >
         <Icon name="bi:filter-circle-fill" class="text-light me-2" />
-        Filters
+        {{ translations.events.filters }}
       </button>
     </div>
   </div>

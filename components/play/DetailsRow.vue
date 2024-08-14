@@ -48,8 +48,8 @@ onMounted(() => {
         </StandardButton>
       </div>
     </div>
-    <div v-if="showCast" class="col-12 border-top border-light mb-5" style="--bs-border-opacity: 0.2">
-      <PlayDetailsCastSlider />
+    <div v-if="showCast" class="col-12 border-top border-light mb-4" style="--bs-border-opacity: 0.2">
+      <PlayDetailsCast />
     </div>
   </div>
 </template>

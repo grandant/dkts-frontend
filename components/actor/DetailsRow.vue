@@ -14,12 +14,52 @@ onMounted(() => {
 </script>
 
 <template lang="html">
-  <!-- Plays slider -->
-  <div class="d-flex align-items-center fs-5 fw-bold mt-4 mt-lg-5 mb-3 p-0">
-    <Icon name="ph:line-vertical-bold" class="text-primary ms-n2" />
-    <span class="text-light">Credits</span>
+  <div class="row row-cols-auto text-light rounded-5 bg-gray-blurred gradient-border mt-4 mt-md-5">
+    <div class="col-12">
+      <div class="row mb-4">
+        <div class="d-flex align-items-center fs-5 fw-bold mt-4 mb-3 p-1">
+          <Icon name="ph:line-vertical-bold" class="text-primary" />
+          <span class="text-light">Credits</span>
+        </div>
+        <div v-for="(play, index) in actor.plays" :key="play.slug" class="col-6 col-md-4 col-lg-3 mb-3 card-col">
+          <div class="row row-cols-auto justify-content-between mx-0 stage-pill">
+            <StagePill :stage="play.stage" :paddingX="1">
+              <template #stage>
+                {{ getTranslation(play, "stage") }}
+              </template>
+            </StagePill>
+            <div class="col pe-0">
+              {{ play.length }}
+            </div>
+          </div>
+          <PlayCard
+            :playLink="play.slug"
+            buttonColor="primary"
+            :buttonText="translations.events.more"
+            :buttonPadding="2"
+          >
+            <template #images>
+              <NuxtImg
+                format="webp"
+                :provider="setProvider()"
+                :src="setMediaUrl(`/media/plays/${play.slug}/poster.jpg`)"
+                :alt="`Photo - ${actor.name}`"
+                class="card-img-top img-fluid gallery-slide"
+                width="1000"
+                height="1240"
+                :sizes="imageSizes"
+                placeholder
+              />
+            </template>
+            <template #name>
+              {{ getTranslation(play, "name") }}
+            </template>
+          </PlayCard>
+        </div>
+      </div>
+    </div>
   </div>
-  <Swiper
+  <!-- <Swiper
     :modules="[SwiperAutoplay]"
     slidesPerView="auto"
     spaceBetween="35"
@@ -55,7 +95,7 @@ onMounted(() => {
             :provider="setProvider()"
             :src="setMediaUrl(`/media/plays/${play.slug}/poster.jpg`)"
             :alt="`Photo - ${actor.name}`"
-            class="img-fluid gallery-slide"
+            class="card-img-top img-fluid gallery-slide"
             width="1000"
             height="1240"
             :sizes="imageSizes"
@@ -68,7 +108,7 @@ onMounted(() => {
       </PlayCard>
       <div class="swiper-lazy-preloader"></div>
     </SwiperSlide>
-  </Swiper>
+  </Swiper> -->
 </template>
 
 <style lang="css" scoped>
@@ -83,6 +123,6 @@ onMounted(() => {
 }
 
 .swiper-slide {
-  max-width: min-content;
+  /* max-width: min-content; */
 }
 </style>

@@ -33,6 +33,7 @@ const model = defineModel();
 <style lang="css" scoped>
 .calendar-filter {
   text-align: center;
+  text-transform: uppercase;
   min-width: 100px;
   height: 35px;
   opacity: 0.75;

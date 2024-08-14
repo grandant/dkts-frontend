@@ -19,7 +19,7 @@ onMounted(() => {
     <div class="modal-dialog modal-fullscreen text-light">
       <div class="modal-content bg-gray-blurred">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="filtersModal">Event Filters</h1>
+          <h1 class="modal-title fs-5" id="filtersModal">{{ translations.events.event_filters }}</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body fs-5">
@@ -50,7 +50,9 @@ onMounted(() => {
                 :checked="currentRadio"
                 autocomplete="on"
               />
-              <label class="btn btn-outline-primary rounded-5 w-100" for="currentFalse">All</label>
+              <label class="btn btn-outline-primary rounded-5 w-100" for="currentFalse">
+                {{ translations.events.all }}
+              </label>
             </div>
           </div>
           <!-- Audience filters -->
@@ -89,6 +91,13 @@ onMounted(() => {
           <!-- Reset button -->
           <div class="col-12 text-center mt-5">
             <PlaysFiltersResetButton />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="col-12 text-center my-3">
+            <button type="button" class="btn btn-primary rounded-5 px-5">
+              {{ translations.events.apply }}
+            </button>
           </div>
         </div>
       </div>
