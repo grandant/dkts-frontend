@@ -95,7 +95,7 @@ onMounted(() => {
         </div>
         <div class="modal-footer">
           <div class="col-12 text-center my-3">
-            <button type="button" class="btn btn-primary rounded-5 px-5">
+            <button type="button" class="btn btn-primary rounded-5 px-5" data-bs-dismiss="modal">
               {{ translations.events.apply }}
             </button>
           </div>

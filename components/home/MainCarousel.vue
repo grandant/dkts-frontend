@@ -30,26 +30,30 @@ onMounted(() => {
     >
       <SwiperSlide v-for="highlight in highlights" :key="highlight">
         <div id="imageContainer" class="d-flex flex-column align-items-center">
-          <NuxtImg
-            v-if="userScreenOrientation == 'portrait-primary' && pageLoaded"
-            :provider="setProvider()"
-            format="webp"
-            :src="setMediaUrl(`/media/plays/${highlight.slug}/poster.jpg`)"
-            :alt="`${highlight.name} - Poster`"
-            class="img-fluid object-fit-cover"
-            sizes="150px sm:90vw md:20vw"
-            :placeholder="[1]"
-          />
-          <NuxtImg
-            v-if="userScreenOrientation == 'landscape-primary' && pageLoaded"
-            :provider="setProvider()"
-            format="webp"
-            :src="setMediaUrl(`/media/plays/${highlight.slug}/cover.jpg`)"
-            :alt="`${highlight.name} - Poster`"
-            class="img-fluid object-fit-cover"
-            sizes="800px lg:80vw"
-            :placeholder="[19]"
-          />
+          <NuxtLinkLocale class="" :to="`/events/plays/${highlight.slug}`">
+            <NuxtImg
+              v-if="userScreenOrientation == 'portrait-primary' && pageLoaded"
+              :provider="setProvider()"
+              format="webp"
+              :src="setMediaUrl(`/media/plays/${highlight.slug}/poster.jpg`)"
+              :alt="`${highlight.name} - Poster`"
+              class="img-fluid object-fit-cover portrait"
+              sizes="150px sm:90vw md:20vw"
+              :placeholder="[1]"
+            />
+          </NuxtLinkLocale>
+          <NuxtLinkLocale class="landscape" :to="`/events/plays/${highlight.slug}`">
+            <NuxtImg
+              v-if="userScreenOrientation == 'landscape-primary' && pageLoaded"
+              :provider="setProvider()"
+              format="webp"
+              :src="setMediaUrl(`/media/plays/${highlight.slug}/cover.jpg`)"
+              :alt="`${highlight.name} - Poster`"
+              class="img-fluid object-fit-cover"
+              sizes="800px lg:80vw"
+              :placeholder="[19]"
+            />
+          </NuxtLinkLocale>
         </div>
         <div class="swiper-lazy-preloader"></div>
       </SwiperSlide>
@@ -75,7 +79,13 @@ onMounted(() => {
   height: 70vh;
 }
 
-.img-fluid {
+.portrait {
+  width: 100vw;
+  height: auto;
+}
+
+a,
+.landscape {
   width: auto;
   height: 100%;
 }
