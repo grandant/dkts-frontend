@@ -135,6 +135,7 @@ onBeforeUnmount(() => {
   min-height: 54px;
 }
 
+.router-link-active,
 .router-link-exact-active {
   max-width: max-content;
 }
