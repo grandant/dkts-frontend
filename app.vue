@@ -2,7 +2,12 @@
 const nuxtApp = useNuxtApp();
 
 const userLocale = useState("userLocale", () => nuxtApp.$i18n.locale.value);
-const userTimezone = useState("userTimezone", () => Intl.DateTimeFormat().resolvedOptions().timeZone);
+const userTimezone = useState("userTimezone", () => {
+  if (process.client) {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone;
+  }
+  return "Europe/Sofia";
+});
 
 const { data: translations } = await useFetch(setApiUrl("/translations/"), {
   key: "translations",
@@ -61,7 +66,7 @@ useSeoMeta({
 });
 
 onMounted(() => {
-  // console.log(commonImages.value);
+  console.log(userTimezone.value);
 });
 </script>
 
