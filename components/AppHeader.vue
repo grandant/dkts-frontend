@@ -135,8 +135,14 @@ onBeforeUnmount(() => {
   min-height: 54px;
 }
 
-.router-link-active,
+.router-link-active {
+  font-weight: bold;
+  box-shadow: rgba(255, 0, 0, 1) 0px -10px 2px -7px inset;
+  max-width: max-content;
+}
+
 .router-link-exact-active {
+  box-shadow: rgba(255, 0, 0, 1) 0px -10px 2px -7px inset;
   max-width: max-content;
 }
 
