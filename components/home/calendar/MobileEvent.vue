@@ -69,8 +69,4 @@ onMounted(() => {
 .stage-pill {
   width: 81px;
 }
-
-.stage-name {
-  font-size: x-small;
-}
 </style>

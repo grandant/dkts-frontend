@@ -83,10 +83,4 @@ onMounted(() => {
   opacity: 0;
   filter: blur(1rem);
 }
-
-@media (max-width: 767px) {
-  .stage-pill {
-    font-size: small;
-  }
-}
 </style>

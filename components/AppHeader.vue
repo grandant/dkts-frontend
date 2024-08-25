@@ -135,21 +135,8 @@ onBeforeUnmount(() => {
   min-height: 54px;
 }
 
-/* .nav-link {
-  padding-top: 15px;
-  padding-bottom: 15px;
-} */
-
-.router-link-active {
-  font-weight: bold;
-}
-
 .router-link-exact-active {
   max-width: max-content;
-  box-shadow: rgba(255, 0, 0, 1) 0px -10px 2px -7px inset;
-  /* box-shadow: rgba(255, 0, 0, 1) 0px 15px 10px -10px; */
-  /* box-shadow: rgba(255, 0, 0, 1) 0px 15px 5px -5px; */
-  /* box-shadow: 0 2px 0px 0px rgba(255, 0, 0, 1); */
 }
 
 .navbar-brand {

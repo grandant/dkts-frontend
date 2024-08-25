@@ -66,7 +66,7 @@ useSeoMeta({
 });
 
 onMounted(() => {
-  console.log(userTimezone.value);
+  // console.log(userTimezone.value);
 });
 </script>
 

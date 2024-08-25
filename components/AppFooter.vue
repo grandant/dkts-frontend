@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { data: translations } = useNuxtData("translations");
+const currentYear = new Date().getFullYear();
 
 onMounted(() => {
   // console.log(translations.value.common.address);
@@ -11,7 +12,7 @@ onMounted(() => {
     <footer class="bd-footer py-4 py-md-2 my-5">
       <div class="container border border-3 rounded-5">
         <div class="row d-flex justify-content-around align-items-center mt-3">
-          <div class="col-12 col-md-4 col-lg-3 col-xl-2 d-flex flex-column justify-content-center align-items-center">
+          <div class="col-6 col-md-4 col-lg-3 col-xl-2 d-flex flex-column justify-content-center align-items-center">
             <NuxtImg
               format="webp"
               :provider="setProvider()"
@@ -37,34 +38,35 @@ onMounted(() => {
         <hr class="mt-4 mb-4" />
         <FooterSponsorsRow />
         <hr class="mt-4 mb-4" />
-        <div class="d-flex row mt-3">
-          <div
-            class="col-12 col-md-9 ps-5"
-            style="
-              color: white;
-              font-size: 14px;
-              font-family: Helvetica;
-              font-weight: 400;
-              text-transform: uppercase;
-              line-height: 14px;
-              word-wrap: break-word;
-            "
-          >
-            Този проект се осъществява с финансовата подкрепа на Министерството на Културата и Община Шумен.
+        <div class="d-flex row row-cols-auto justify-content-center justify-content-md-between mt-3 px-2 px-md-5 pb-4">
+          <div class="col d-flex flex-column d-xl-block align-self-center text-uppercase">
+            <a
+              :href="setMediaUrl(`/policies/privacy-policy.pdf`, `pdf`)"
+              class="link-light link-underline-opacity-0 link-underline-opacity-75-hover mb-3 mb-md-0 mx-0 mx-xl-3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ translations.common.privacy }}
+            </a>
+            <a
+              :href="setMediaUrl(`/policies/gdpr-policy.pdf`, `pdf`)"
+              class="link-light link-underline-opacity-0 link-underline-opacity-75-hover mb-3 mb-md-0 mx-0 mx-xl-3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ translations.common.gdpr }}
+            </a>
+            <a
+              :href="setMediaUrl(`/policies/public-info.pdf`, `pdf`)"
+              class="link-light link-underline-opacity-0 link-underline-opacity-75-hover mb-3 mb-md-0 mx-0 mx-xl-3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ translations.common.public }}
+            </a>
           </div>
-          <div
-            class="col-12 col-md-3 text-center text-md-end mb-3 pe-5 mt-3 mt-md-0"
-            style="
-              color: white;
-              font-size: 14px;
-              font-family: Helvetica;
-              font-weight: 400;
-              text-transform: uppercase;
-              line-height: 14px;
-              word-wrap: break-word;
-            "
-          >
-            © 2024 DKT VASIL DRUMEV
+          <div class="col d-flex flex-column justify-content-center">
+            <span>© {{ currentYear }} {{ translations.common.dkts }}</span>
           </div>
         </div>
       </div>

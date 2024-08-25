@@ -5,11 +5,12 @@ const { data: highlights } = useNuxtData("highlights");
 const userScreenOrientation = useState("userScreenOrientation");
 const pageLoaded = ref(false);
 
+// watchEffect(() => {
+//   console.log(userScreenOrientation.value);
+// });
+
 onMounted(() => {
   pageLoaded.value = true;
-  // watchEffect(() => {
-  //   console.log(userScreenOrientation.value);
-  // });
 });
 </script>
 
@@ -30,7 +31,7 @@ onMounted(() => {
       }"
     >
       <SwiperSlide v-for="highlight in highlights" :key="highlight">
-        <div id="imageContainer" class="d-flex flex-column align-items-center">
+        <div id="imageContainer" class="container d-flex justify-content-center">
           <NuxtLinkLocale class="" :to="`/events/plays/${highlight.slug}`">
             <NuxtImg
               v-if="userScreenOrientation == 'portrait-primary' && pageLoaded"
@@ -50,7 +51,7 @@ onMounted(() => {
               format="webp"
               :src="setMediaUrl(`/media/plays/${highlight.slug}/cover.jpg`)"
               :alt="`${highlight.name} - Poster`"
-              class="img-fluid object-fit-cover"
+              class="img-fluid object-fit-cover landscape"
               sizes="800px lg:80vw"
               :placeholder="[19]"
             />
@@ -82,10 +83,9 @@ onMounted(() => {
 
 .portrait {
   width: 100vw;
-  height: auto;
+  height: 100%;
 }
 
-a,
 .landscape {
   width: auto;
   height: 100%;

@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template lang="html">
-  <div v-if="text" class="row justify-content-center text-light">
+  <div v-if="text" class="row justify-content-center text-light mx-0">
     <div class="page-title pb-3">
       <h1>{{ text }}</h1>
     </div>

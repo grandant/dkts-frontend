@@ -159,6 +159,7 @@ blockquote {
   margin-bottom: 5px;
 }
 
+// Custom text truncation for mobile devices
 .line-clamp-small {
   display: -webkit-box;
   -webkit-line-clamp: 5;
@@ -179,18 +180,14 @@ hr {
   background-image: -o-linear-gradient(left, #ccc, #333, #ccc);
 }
 
-// Button styles
-.btn {
-  text-transform: uppercase;
-}
-
 // Navbar styles
-.nav-link {
-  // text-transform: uppercase;
+.router-link-active {
+  font-weight: bold;
+  box-shadow: rgba(255, 0, 0, 1) 0px -10px 2px -7px inset;
 }
 
-.nav-dropdown {
-  // text-transform: uppercase;
+.router-link-exact-active {
+  box-shadow: rgba(255, 0, 0, 1) 0px -10px 2px -7px inset;
 }
 
 .navbar-toggler:focus {
@@ -200,6 +197,18 @@ hr {
 
 .navbar-toggler {
   border: 0 !important;
+}
+
+// Button styles
+.btn {
+  text-transform: uppercase;
+}
+
+// Stage pill styles
+@media (max-width: 767px) {
+  .stage-pill {
+    font-size: x-small;
+  }
 }
 
 // Swiper JS styles

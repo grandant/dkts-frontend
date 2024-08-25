@@ -16,7 +16,7 @@ export function setApiUrl(localUrl: string): string {
   return `${apiUrl}${localUrl}`;
 }
 
-// Set the correct URL for images
+// Set the correct URL for media files
 export function setMediaUrl(localUrl: string, type?: string): string {
   const environments = {
     development: "/file/dkts-main",
@@ -29,7 +29,11 @@ export function setMediaUrl(localUrl: string, type?: string): string {
     production: "https://cdn.grand-ant.com/file/dkts-main",
   };
 
-  if (type == "video" || type == "photo") {
+  // Download some files (e.g. video, pdf) directly from B2
+  // Direct types
+  const downloadableTypes = ["video", "photo", "pdf"];
+
+  if (downloadableTypes.includes(type)) {
     const directUrl = directEnvironments[currentEnv];
 
     return `${directUrl}${localUrl}`;

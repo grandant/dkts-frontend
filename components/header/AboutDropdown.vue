@@ -29,7 +29,7 @@ watch(
       <span>{{ translations.common.about }}</span>
       <!-- <span :class="{ 'router-link-active': isActive }">{{ translations.common.about }}</span> -->
     </a>
-    <ul class="dropdown-menu border-primary" data-bs-theme="dark">
+    <ul class="dropdown-menu border-primary">
       <li>
         <NuxtLinkLocale @click="closeMenu()" to="/about/actors" class="dropdown-item nav-dropdown">
           <span>{{ translations.common.collective }}</span>
@@ -68,7 +68,7 @@ watch(
 <style lang="css" scoped>
 .router-link-active {
   font-weight: bold;
-  box-shadow: rgba(255, 0, 0, 1) 0px -10px 2px -7px inset;
+  /* box-shadow: rgba(255, 0, 0, 1) 0px -10px 2px -7px inset; */
 }
 
 .router-link-active .nav-link {
@@ -77,6 +77,10 @@ watch(
 
 .nav-link:not(.router-link-active) {
   opacity: 0.75;
+}
+
+.nav-link:hover {
+  opacity: 1;
 }
 
 .dropdown {

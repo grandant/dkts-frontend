@@ -18,7 +18,7 @@ const switchLocalePath = useSwitchLocalePath();
     >
       <Icon class="mb-1" name="bi:globe2" />
     </a>
-    <ul class="dropdown-menu border-primary" data-bs-theme="dark">
+    <ul class="dropdown-menu border-primary">
       <li>
         <NuxtLink @click="closeMenu()" :to="switchLocalePath('bg')" class="dropdown-item nav-dropdown lang-btn">
           <div class="d-flex align-items-center">
