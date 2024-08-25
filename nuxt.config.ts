@@ -13,6 +13,9 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     // "@formkit/auto-animate/nuxt",
   ],
+  build: {
+    extractCSS: true,
+  },
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },

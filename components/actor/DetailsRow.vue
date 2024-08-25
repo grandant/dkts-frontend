@@ -24,13 +24,9 @@ onMounted(() => {
         <div v-for="(play, index) in actor.plays" :key="play.slug" class="col-6 col-md-4 col-lg-3 mb-3 card-col">
           <div class="row row-cols-auto justify-content-between mx-0 stage-pill">
             <StagePill :stage="play.stage" :paddingX="1">
-              <template #stage>
-                {{ getTranslation(play, "stage") }}
-              </template>
+              <template #stage> {{ getTranslation(play, "stage") }} </template>
             </StagePill>
-            <div class="col pe-0">
-              {{ play.length }}
-            </div>
+            <div class="col pe-0">{{ play.length }} {{ translations.events.min }}</div>
           </div>
           <PlayCard
             :playLink="play.slug"
@@ -59,6 +55,7 @@ onMounted(() => {
       </div>
     </div>
   </div>
+  <!-- NOTE: Will be removed soon -->
   <!-- <Swiper
     :modules="[SwiperAutoplay]"
     slidesPerView="auto"

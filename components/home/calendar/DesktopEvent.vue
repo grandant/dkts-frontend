@@ -33,7 +33,9 @@ onMounted(() => {
   <div class="row mx-0 mx-xl-5 my-4 px-0 px-xl-3 pt-2">
     <!-- Col-1 -->
     <div class="col d-flex flex-column align-items-start col-max">
-      <slot name="images" />
+      <NuxtLinkLocale class="" :to="`/events/plays/${details.slug}`">
+        <slot name="images" />
+      </NuxtLinkLocale>
     </div>
     <!-- Col-2 -->
     <div id="colTwo" class="col d-flex flex-column align-items-center ps-1 col-max">
@@ -51,9 +53,11 @@ onMounted(() => {
         </template>
       </StagePill>
       <div>
-        <p id="title" class="text-uppercase text-bold fw-bold fs-5 mb-0">
-          {{ getTranslation(details, "name") }}
-        </p>
+        <NuxtLinkLocale class="nav-link" :to="`/events/plays/${details.slug}`">
+          <p id="title" class="text-uppercase text-bold fw-bold fs-5 mb-0">
+            {{ getTranslation(details, "name") }}
+          </p>
+        </NuxtLinkLocale>
         <p class="">{{ getTranslation(details, "genre") }}</p>
         <p class="">{{ getTranslation(details, "director") }}</p>
         <p class="">{{ details.length }} {{ translations.events.minutes }}</p>

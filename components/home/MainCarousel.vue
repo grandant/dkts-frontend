@@ -19,6 +19,7 @@ onMounted(() => {
       :modules="[SwiperAutoplay, SwiperPagination]"
       :slides-per-view="1"
       :loop="true"
+      :grabCursor="true"
       :autoplay="{
         delay: 8000,
         disableOnInteraction: true,
@@ -42,7 +43,7 @@ onMounted(() => {
               :placeholder="[1]"
             />
           </NuxtLinkLocale>
-          <NuxtLinkLocale class="landscape" :to="`/events/plays/${highlight.slug}`">
+          <NuxtLinkLocale class="landscape gallery-slide" :to="`/events/plays/${highlight.slug}`">
             <NuxtImg
               v-if="userScreenOrientation == 'landscape-primary' && pageLoaded"
               :provider="setProvider()"
