@@ -111,7 +111,7 @@ onMounted(() => {
 <style lang="css" scoped>
 @media (max-width: 767px) {
   .stage-pill {
-    font-size: small;
+    font-size: x-small;
   }
 }
 
