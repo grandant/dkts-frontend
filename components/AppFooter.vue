@@ -38,8 +38,10 @@ onMounted(() => {
         <hr class="mt-4 mb-4" />
         <FooterSponsorsRow />
         <hr class="mt-4 mb-4" />
-        <div class="d-flex row row-cols-auto justify-content-center justify-content-md-between mt-3 px-2 px-md-5 pb-4">
-          <div class="col d-flex flex-column d-xl-block align-self-center text-uppercase">
+        <div
+          class="d-flex row row-cols-auto justify-content-center justify-content-md-between justify-content-xl-center mt-3 px-2 px-md-5 pb-4"
+        >
+          <div class="col d-flex flex-column d-xl-block text-uppercase mb-xl-3">
             <a
               :href="setMediaUrl(`/policies/privacy-policy.pdf`, `pdf`)"
               class="link-light link-underline-opacity-0 link-underline-opacity-75-hover mb-3 mb-md-0 mx-0 mx-xl-3"
@@ -63,6 +65,14 @@ onMounted(() => {
               rel="noopener noreferrer"
             >
               {{ translations.common.public }}
+            </a>
+            <a
+              :href="setMediaUrl(`/policies/ticket-policy.pdf`, `pdf`)"
+              class="link-light link-underline-opacity-0 link-underline-opacity-75-hover mb-3 mb-md-0 mx-0 mx-xl-3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {{ translations.common.ticket }}
             </a>
           </div>
           <div class="col d-flex flex-column justify-content-center">

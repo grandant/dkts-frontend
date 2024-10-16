@@ -102,9 +102,9 @@ onBeforeUnmount(() => {
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <div class="d-flex align-items-center">
-                <a class="nav-link search-bar" href="#">
+                <!-- <a class="nav-link search-bar" href="#">
                   <Icon id="searchIcon" class="ms-2" name="bi:search" />
-                </a>
+                </a> -->
                 <!-- <form class="d-block" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                 </form> -->

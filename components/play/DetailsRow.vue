@@ -9,7 +9,7 @@ const actorNames = computed(() => {
 const showCast = ref(false);
 
 onMounted(() => {
-  // console.log(actorNames.value);
+  // console.log(getTranslation(play, "genre"));
 });
 </script>
 
@@ -32,7 +32,11 @@ onMounted(() => {
         <div class="col">
           <div class="col-12 col-lg-9">
             <div class="fw-bold fs-4">{{ translations.events.cast }}:</div>
-            {{ actorNames }}
+            <div v-if="play.guest_actors">
+              {{ translations.events.guest_actors }}: {{ getTranslation(play, "guest_actors") }}
+            </div>
+            <hr />
+            <div>{{ actorNames }}</div>
           </div>
         </div>
       </div>
