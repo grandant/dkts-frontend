@@ -101,3 +101,5 @@ public/policies/
 public/sponsors/
 bucket_sync.py
 upstash.py
+pyproject.toml
+poetry.lock
