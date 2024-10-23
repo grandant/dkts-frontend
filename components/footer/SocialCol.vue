@@ -31,9 +31,9 @@
     >
       <Icon name="bi:spotify" class="footerIcon" />
     </a>
-    <a href="https://podcast.dktshumen.com" class="link-light" target="_blank" rel="noopener noreferrer">
+    <!-- <a href="https://podcast.dktshumen.com" class="link-light" target="_blank" rel="noopener noreferrer">
       <Icon name="bi:rss" class="footerIcon" />
-    </a>
+    </a> -->
   </div>
 </template>
 
