@@ -64,7 +64,6 @@ onBeforeUnmount(() => {
               {{ translations.common.repertoire }}
             </NuxtLinkLocale>
             <HeaderAboutDropdown :closeMenu="closeOffcanvasNavbar" />
-            <HeaderLangDropdown :closeMenu="closeOffcanvasNavbar" />
           </ul>
           <!-- SearchBar -->
           <!-- <div id="desktopSearch" class="d-none d-lg-block me-auto">
@@ -100,16 +99,7 @@ onBeforeUnmount(() => {
             </li>
           </ul> -->
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <div class="d-flex align-items-center">
-                <!-- <a class="nav-link search-bar" href="#">
-                  <Icon id="searchIcon" class="ms-2" name="bi:search" />
-                </a> -->
-                <!-- <form class="d-block" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                </form> -->
-              </div>
-            </li>
+            <HeaderLangDropdown :closeMenu="closeOffcanvasNavbar" />
           </ul>
         </div>
       </div>

@@ -40,11 +40,11 @@ watch(
           <span>{{ translations.common.stages }}</span>
         </NuxtLinkLocale>
       </li>
-      <!-- <li>
-        <NuxtLink :to="localePath('/about/history')" class="dropdown-item nav-dropdown" @click="closeMenu">
-          {{ translations.common.history }}
-        </NuxtLink>
-      </li> -->
+      <li>
+        <NuxtLinkLocale @click="closeMenu()" to="/about/history" class="dropdown-item nav-dropdown">
+          <span>{{ translations.common.history }}</span>
+        </NuxtLinkLocale>
+      </li>
       <li>
         <hr class="dropdown-divider border-primary" />
       </li>

@@ -41,7 +41,7 @@ onMounted(() => {
         <div
           class="d-flex row row-cols-auto justify-content-center justify-content-md-between justify-content-xl-center mt-3 px-2 px-md-5 pb-4"
         >
-          <div class="col d-flex flex-column d-xl-block text-uppercase mb-xl-3">
+          <div class="col d-flex flex-column d-xl-block text-uppercase">
             <a
               :href="setMediaUrl(`/policies/privacy-policy.pdf`, `pdf`)"
               class="link-light link-underline-opacity-0 link-underline-opacity-75-hover mb-3 mb-md-0 mx-0 mx-xl-3"
