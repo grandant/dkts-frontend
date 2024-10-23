@@ -24,7 +24,7 @@ export function setMediaUrl(localUrl: string, type?: string): string {
   };
 
   const directEnvironments = {
-    // TODO: There might be additiona config needed to integrate B2 and Cloudflare
+    // TODO: There might be additional config needed to integrate B2 and Cloudflare
     development: "",
     production: "https://cdn.grand-ant.com/file/dkts-main",
   };

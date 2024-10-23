@@ -16,10 +16,10 @@ onMounted(async () => {
   <div class="container mt-3">
     <div class="row justify-content-center">
       <div class="col-12 col-lg-11 text-center">
-        loading="lazy"
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/top.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/top.jpg`)"
           alt=""
           class="img-fluid"
           sizes=""
@@ -41,9 +41,10 @@ onMounted(async () => {
     <HistoryParagraph>
       <template #images>
         <figure class="figure col-12 col-md-4 col-xl-2 float-end">
-          <img
+          <NuxtImg
             format="webp"
-            :src="`/media/history/1.jpg`"
+            :provider="setProvider()"
+            :src="setMediaUrl(`/media/history/1.jpg`)"
             alt=""
             class="img-fluid w-100"
             sizes=""
@@ -68,9 +69,10 @@ onMounted(async () => {
       <template #images>
         <div class="row justify-content-center">
           <figure class="figure col-12 col-md-11 col-lg-9">
-            <img
+            <NuxtImg
               format="webp"
-              :src="`/media/history/2.jpg`"
+              :provider="setProvider()"
+              :src="setMediaUrl(`/media/history/2.jpg`)"
               alt=""
               class="img-fluid w-100"
               sizes=""
@@ -89,9 +91,10 @@ onMounted(async () => {
     <HistoryParagraph>
       <template #images>
         <figure class="figure col-12 col-md-4 col-xl-3 float-end">
-          <img
+          <NuxtImg
             format="webp"
-            :src="`/media/history/3.jpg`"
+            :provider="setProvider()"
+            :src="setMediaUrl(`/media/history/3.jpg`)"
             alt=""
             class="img-fluid w-100"
             sizes=""
@@ -113,9 +116,10 @@ onMounted(async () => {
     </HistoryParagraph>
     <div class="row align-items-center">
       <figure class="figure col-12 col-md-6">
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/4.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/4.jpg`)"
           alt=""
           class="img-fluid w-100"
           sizes=""
@@ -125,9 +129,10 @@ onMounted(async () => {
         <figcaption class="figure-caption text-center">{{ translations.history["pic4"] }}</figcaption>
       </figure>
       <figure class="figure col-12 col-md-6">
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/5.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/5.jpg`)"
           alt=""
           class="img-fluid w-100"
           sizes=""
@@ -157,9 +162,10 @@ onMounted(async () => {
     </HistoryParagraph>
     <div class="row align-items-center">
       <figure class="figure col-12 col-md-5">
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/6.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/6.jpg`)"
           alt=""
           class="img-fluid w-100"
           sizes=""
@@ -169,9 +175,10 @@ onMounted(async () => {
         <figcaption class="figure-caption text-center">{{ translations.history["pic6"] }}</figcaption>
       </figure>
       <figure class="figure col-12 col-md-3">
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/7.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/7.jpg`)"
           alt=""
           class="img-fluid w-100"
           sizes=""
@@ -181,9 +188,10 @@ onMounted(async () => {
         <figcaption class="figure-caption text-center">{{ translations.history["pic7"] }}</figcaption>
       </figure>
       <figure class="figure col-12 col-md-4">
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/8.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/8.jpg`)"
           alt=""
           class="img-fluid w-100"
           sizes=""
@@ -212,9 +220,10 @@ onMounted(async () => {
     <HistoryParagraph>
       <template #images>
         <figure class="figure col-12 col-md-4 col-xl-3 float-end">
-          <img
+          <NuxtImg
             format="webp"
-            :src="`/media/history/9.jpg`"
+            :provider="setProvider()"
+            :src="setMediaUrl(`/media/history/9.jpg`)"
             alt=""
             class="img-fluid w-100"
             sizes=""
@@ -238,9 +247,10 @@ onMounted(async () => {
     <HistoryParagraph>
       <template #images>
         <figure class="figure col-12 col-md-7 col-xl-5 float-start">
-          <img
+          <NuxtImg
             format="webp"
-            :src="`/media/history/10.jpg`"
+            :provider="setProvider()"
+            :src="setMediaUrl(`/media/history/10.jpg`)"
             alt=""
             class="img-fluid w-100"
             sizes=""
@@ -265,9 +275,10 @@ onMounted(async () => {
     </HistoryParagraph>
     <div class="row align-items-center">
       <figure class="figure col-12 col-md-6">
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/11.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/11.jpg`)"
           alt=""
           class="img-fluid w-100"
           sizes=""
@@ -277,9 +288,10 @@ onMounted(async () => {
         <figcaption class="figure-caption text-center">{{ translations.history["pic11"] }}</figcaption>
       </figure>
       <figure class="figure col-12 col-md-6">
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/12.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/12.jpg`)"
           alt=""
           class="img-fluid w-100"
           sizes=""
@@ -306,9 +318,10 @@ onMounted(async () => {
     </HistoryParagraph>
     <div class="row">
       <figure class="figure col-12 col-md-6">
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/13.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/13.jpg`)"
           alt=""
           class="img-fluid w-100"
           sizes=""
@@ -318,9 +331,10 @@ onMounted(async () => {
         <figcaption class="figure-caption text-center">{{ translations.history["pic12"] }}</figcaption>
       </figure>
       <figure class="figure col-12 col-md-6">
-        <img
+        <NuxtImg
           format="webp"
-          :src="`/media/history/14.jpg`"
+          :provider="setProvider()"
+          :src="setMediaUrl(`/media/history/14.jpg`)"
           alt=""
           class="img-fluid w-100"
           sizes=""
