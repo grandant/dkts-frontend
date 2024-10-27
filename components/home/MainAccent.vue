@@ -3,7 +3,7 @@ const { data: translations } = useNuxtData("translations");
 const { data: highlights } = useNuxtData("highlights");
 const { data: images } = useNuxtData("highlightImages");
 
-const mainAccent = computed(() => highlights.value[0]);
+const mainAccent = computed(() => highlights.value[2]);
 const shortDescription = computed(() => getTranslation(mainAccent.value, "short_description"));
 const userDevice = useState("userDevice");
 // const eventID = computed(() => mainAccent.value.entase_data[0].id)
@@ -72,7 +72,7 @@ onMounted(() => {
           <NuxtImg
             format="webp"
             :provider="setProvider()"
-            :src="setMediaUrl(`/media/plays/${mainAccent.slug}/photos/7.jpg`)"
+            :src="setMediaUrl(`/media/plays/${mainAccent.slug}/photos/main.jpg`)"
             :alt="`${mainAccent.name} - Poster`"
             class="img-fluid w-100 border border-3"
             sizes="250px lg:200px xl:500px"

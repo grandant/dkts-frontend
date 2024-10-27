@@ -34,8 +34,8 @@ onMounted(() => {
             <div class="fw-bold fs-4">{{ translations.events.cast }}:</div>
             <div v-if="play.guest_actors">
               {{ translations.events.guest_actors }}: {{ getTranslation(play, "guest_actors") }}
+              <hr />
             </div>
-            <hr />
             <div>{{ actorNames }}</div>
           </div>
         </div>
