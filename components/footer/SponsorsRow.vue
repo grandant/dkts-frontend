@@ -8,14 +8,17 @@ const { data: commonImages } = useNuxtData("commonImages");
       <slot name="heading" />
     </span>
     <div class="row row-cols-auto d-flex justify-content-center">
-      <div v-for="img in commonImages.sponsors" class="col">
+      <div
+        v-for="img in commonImages.sponsors"
+        class="col-4 col-md-2 d-flex flex-column justify-content-center align-items-center"
+      >
         <NuxtImg
           format="webp"
           :provider="setProvider()"
           :src="setMediaUrl(`/sponsors/${img}`)"
           :alt="`${img} - Logo`"
           class="img-fluid mx-2 my-3"
-          sizes="175px lg:20vw"
+          sizes="125px lg:20vw"
           loading="lazy"
         />
       </div>

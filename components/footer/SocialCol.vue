@@ -8,7 +8,7 @@
       <slot name="heading" />
     </span>
   </div>
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center justify-content-md-start gap-5 gap-md-4 mt-1 mt-md-3 pb-1">
     <a href="https://www.facebook.com/theatershumen" class="link-light" target="_blank" rel="noopener noreferrer">
       <Icon name="bi:facebook" class="footerIcon" />
     </a>
@@ -45,6 +45,5 @@
 
 .footerIcon {
   font-size: xx-large;
-  margin: 15px;
 }
 </style>
