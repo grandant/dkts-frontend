@@ -26,7 +26,9 @@ onMounted(() => {
               loading="lazy"
             />
           </div>
-          <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex flex-column justify-content-start mt-0 mt-md-4 mt-lg-0">
+          <div
+            class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex flex-column justify-content-start mt-0 mt-md-4 mt-lg-0"
+          >
             <div class="d-none d-md-block text-start fs-5">
               {{ translations.common.address }}
             </div>

@@ -2,7 +2,7 @@
 const { data: translations } = useNuxtData("translations");
 const { data: play } = useNuxtData("playData");
 const { data: playMedia } = useNuxtData("playMedia");
-const hasVideos = playMedia.value.details["total_videos"] > 0;
+const hasTrailer = computed(() => playMedia.value.videos["trailer"] !== undefined);
 const totalVideos = playMedia.value.details["total_videos"];
 
 const userDevice = useState("userDevice");
@@ -41,7 +41,7 @@ onMounted(() => {
       />
     </div>
     <div class="col-12 col-md-7 px-0 gallery-col">
-      <div v-if="hasVideos" class="row h-100">
+      <div v-if="hasTrailer" class="row h-100">
         <video class="object-fit-cover px-0 px-md-2" controls preload="metadata" height="100%" :poster="videoPoster">
           <source :src="setMediaUrl(`/media/plays/${play.slug}/videos/trailer.mp4`, 'video')" type="video/mp4" />
         </video>
