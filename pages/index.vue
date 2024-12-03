@@ -1,6 +1,12 @@
 <script setup lang="ts">
-const nuxtApp = useNuxtApp();
-const userLocale = useState("userLocale");
+const { data: events } = useNuxtData("calendar");
+
+const hasEvents = computed(() => {
+  return (
+    events &&
+    Object.keys(events.value || {}).some((key) => Array.isArray(events.value[key]) && events.value[key].length > 0)
+  );
+});
 
 onMounted(async () => {
   //
@@ -10,7 +16,9 @@ onMounted(async () => {
 <template lang="html">
   <div id="homepage" class="container-fluid">
     <HomeMainCarousel />
-    <HomeCalendar />
+    <div v-if="hasEvents">
+      <HomeCalendar />
+    </div>
     <HomeMainAccent />
   </div>
 </template>

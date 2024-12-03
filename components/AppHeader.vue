@@ -56,13 +56,14 @@ onBeforeUnmount(() => {
         </div>
         <div class="offcanvas-body">
           <!-- Lefthand items -->
-          <ul class="navbar-nav gap-lg-5 ms-lg-5 mb-2 mb-lg-0">
+          <ul class="navbar-nav gap-3 gap-lg-5 ms-2 ms-lg-5 mb-2 mb-lg-0">
             <NuxtLinkLocale class="nav-link link-light" to="/" @click="closeOffcanvasNavbar">
               {{ translations.common.home }}
             </NuxtLinkLocale>
             <NuxtLinkLocale class="nav-link link-light" to="/events/plays" @click="closeOffcanvasNavbar">
               {{ translations.common.repertoire }}
             </NuxtLinkLocale>
+            <HeaderFestivalsDropdown :closeMenu="closeOffcanvasNavbar" />
             <HeaderAboutDropdown :closeMenu="closeOffcanvasNavbar" />
           </ul>
           <!-- SearchBar -->
@@ -98,7 +99,7 @@ onBeforeUnmount(() => {
               </a>
             </li>
           </ul> -->
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav ms-2 ms-lg-auto">
             <HeaderLangDropdown :closeMenu="closeOffcanvasNavbar" />
           </ul>
         </div>
