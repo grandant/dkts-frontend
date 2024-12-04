@@ -27,7 +27,6 @@ watch(
       aria-expanded="false"
     >
       <span>{{ translations.common.about }}</span>
-      <!-- <span :class="{ 'router-link-active': isActive }">{{ translations.common.about }}</span> -->
     </a>
     <ul class="dropdown-menu border-primary">
       <li>

@@ -1,0 +1,49 @@
+{
+  "name": "Comedy Festival 'Todor Kolev'",
+  "description": "The comedy festival 'Todor Kolev', organized by the Drama Puppet Theater 'Vasil Drumev' – Shumen, launched its first edition in June 2024. Created in honor of the legendary actor, singer, and showman Todor Kolev, the festival pays tribute to the artist whose talent and humor continue to inspire generations.",
+  "mission": {
+    "title": "Mission and Goals",
+    "description": "The festival aims to encourage the creation of high-quality comedy performances, both from professional theaters and from amateur troupes and students. It provides a platform for the exchange of ideas and the promotion of Bulgarian theatrical comedy, establishing itself as an annual forum for creativity and laughter."
+  },
+  "structure": {
+    "title": "Structure",
+    "description": "The festival includes two main categories:",
+    "professional_plays": {
+      "title": "Professional Plays",
+      "description": "A selection of the best comedy performances created by state, municipal, and private theaters."
+    },
+    "amateur_plays": {
+      "title": "Amateur Plays",
+      "description": "Performances by theater universities and amateur formations, who also have the opportunity to showcase their talent."
+    }
+  },
+  "additional_program": {
+    "title": "Accompanying Program",
+    "description": "In addition, there is a rich accompanying program, which includes a variety of cultural and educational activities aimed at expanding creative experiences and inspiring both participants and the audience. The program offers:",
+    "content": [
+      "Thematic exhibitions",
+      "Workshops and seminars",
+      "Acting and directing projects",
+      "Performances and discussions"
+    ]
+  },
+  "awards": {
+    "title": "Awards",
+    "description": "The culmination of the festival is the awarding of prestigious prizes in various categories, including:",
+    "categories": [
+      "Award for Overall Performance",
+      "Award for Direction",
+      "Award for Scenography",
+      "Award for Original Music",
+      "Award for Best Male Role",
+      "Award for Best Female Role",
+      "Award for Debut for Amateur Participants",
+      "Special Award in the Name of Todor Kolev for Lifetime Achievement"
+    ]
+  },
+  "significance": {
+    "title": "Significance",
+    "description": "The comedy festival 'Todor Kolev' is established as a cultural event that attracts audiences from all over the country and unites the theatrical community in the name of comedy. The festival not only honors the great Todor Kolev but also strives to create new traditions in Bulgarian theatrical art."
+  },
+  "contact": "Follow the official website of the Drama Puppet Theater 'Vasil Drumev' – Shumen for more information."
+}

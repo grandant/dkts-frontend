@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   css: ["~/assets/main.css"],
+
   modules: [
     "nuxt-icon",
     "@vueuse/nuxt",
@@ -13,12 +14,26 @@ export default defineNuxtConfig({
     "@nuxtjs/device",
     // "@formkit/auto-animate/nuxt",
   ],
+
   build: {
     extractCSS: true,
   },
+
+  runtimeConfig: {
+    apiKey: "",
+    public: {
+      apiBase: process.env.API_BASE,
+      backendBase: process.env.BACKEND_BASE,
+    },
+  },
+
   app: {
+    head: {
+      titleTemplate: "%s",
+    },
     pageTransition: { name: "page", mode: "out-in" },
   },
+
   image: {
     cloudflare: {
       // baseURL: "http://127.0.0.1:8001/images",
@@ -26,12 +41,15 @@ export default defineNuxtConfig({
     },
     domains: ["127.0.0.1:8001", "cdn.grand-ant.com", "images.grand-ant.com"],
   },
+
   ogImage: {
     enabled: false,
   },
+
   linkChecker: {
     enabled: false,
   },
+
   i18n: {
     strategy: "prefix",
     baseUrl: "https://dktshumen.com",

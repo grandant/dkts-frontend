@@ -6,12 +6,13 @@ defineProps<{
 const { data: translations } = useNuxtData("translations");
 const route = useRoute();
 const localePath = useLocalePath();
-const isActive = ref(route.matched[0].path === localePath("/about"));
+// TODO: Should be fixed
+const isActive = ref(route.matched.some((m) => m.path.includes(localePath("/festivals"))));
 
 watch(
   () => route.matched,
   (matched) => {
-    isActive.value = matched[0].path === localePath("/about");
+    isActive.value = matched.some((m) => m.path.includes(localePath("/festivals")));
   },
 );
 </script>
@@ -29,6 +30,11 @@ watch(
       <span>{{ translations.common.festivals }}</span>
     </a>
     <ul class="dropdown-menu border-primary">
+      <li>
+        <NuxtLinkLocale @click="closeMenu()" to="/festivals/ftk" class="dropdown-item nav-dropdown">
+          <span>{{ translations.common.ftk }}</span>
+        </NuxtLinkLocale>
+      </li>
       <li>
         <a
           class="dropdown-item nav-dropdown"
